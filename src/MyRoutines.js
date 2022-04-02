@@ -6,17 +6,6 @@ const MyRoutines = ({ token, routines, user, myRoutine, fecthmyRoutine }) => {
   const [name, setName] = useState("");
   const [goal, setGoal] = useState("");
 
-  const handleDelete = (e) => {
-    console.log("DELETEDs");
-    fetch("http://fitnesstrac-kr.herokuapp.com/api/routines/6", {
-      method: "PATCH",
-      body: JSON.stringify({
-        name: "Long Cardio Day",
-        goal: "To get your heart pumping!",
-      }),
-    });
-  };
-
   const handleCreateRoutine = async (e) => {
     e.preventDefault();
     console.log("submitted");
@@ -64,9 +53,7 @@ const MyRoutines = ({ token, routines, user, myRoutine, fecthmyRoutine }) => {
         {myRoutine.map((routine, idx) => {
           return (
             <div className="myRoutinesCard" key={idx}>
-              <Link to={`/UpdateRoutine/${routine.id}`} className="link">
-                {routine.name}
-              </Link>
+              <Link to={`/UpdateRoutine/${routine.id}`}>{routine.name}</Link>
               <h4>Goal: {routine.goal}</h4>
               <h4>Creator: {routine.creatorName}</h4>
               {routine.activities.map((activity, idx) => {

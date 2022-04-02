@@ -4,9 +4,8 @@ import { Link, useParams } from "react-router-dom";
 const Activities = ({ routines, user, activities }) => {
   return (
     <>
-      <div className="activitiesHeader">
-        <h2>Activities</h2>
-      </div>
+      <h2>Activities</h2>
+
       <div>
         {user ? (
           <Link to="/MyActivities">Create new activity</Link>
