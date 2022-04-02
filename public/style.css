@@ -61,16 +61,11 @@ h2 {
   align-items: center;
 }
 h3 {
+  color: black;
   display: flex;
   justify-content: center;
-  margin-top: -60px;
-  font-family: "Stalemate";
-  font-size: 50px;
-  background: -webkit-linear-gradient(#802c2b, #467589);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: black;
-  margin-bottom: 150px;
+  align-items: center;
+  font-size: 25px;
 }
 h4 {
   color: black;
@@ -195,11 +190,9 @@ h5 {
 .icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: -95px;
   margin-bottom: 50px;
   font-size: 100px;
+  margin-top: 10px;
 }
 
 footer {
@@ -215,6 +208,38 @@ footer {
   color: white;
 }
 .routinesCard {
-  border: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 350px;
+  box-shadow: 0 0 5px black;
   margin-bottom: 10px;
+}
+
+.routine {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-items: flex-end; */
+  /* padding-left: 20px; */
+}
+.routine > h2 {
+  font-size: 50px;
+}
+.routine > h4 {
+  font-size: 20px;
+}
+.activitiesCard {
+  display: flex;
+  flex-direction: row;
+
+  border: 2px solid black;
+}
+.activitiesCard > h2 {
+  color: blue;
+  font-size: 500px;
+}
+.activities > h2 {
+  color: blue;
+  font-size: 500px;
 }

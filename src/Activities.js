@@ -22,9 +22,8 @@ const Activities = ({ routines, user, activities, url }) => {
 
   return (
     <>
-      <div className="activitiesHeader">
-        <h2>Activities</h2>
-      </div>
+      <h2>Activities</h2>
+
       <div>
         {user ? (
           <Link to="/MyActivities">Create new activity</Link>
@@ -38,8 +37,9 @@ const Activities = ({ routines, user, activities, url }) => {
               return (
                 <div className="activitiesCard" key={activitie.id}>
                   {/* <h1>hi {user.name}</h1> */}
+
                   <Link to={`/Activities/${activitie.id}`}>
-                    <h1>{activitie.name}:</h1>
+                    <h2>{activitie.name}:</h2>
                     <h3>Description: {activitie.description}</h3>
                   </Link>
                 </div>
