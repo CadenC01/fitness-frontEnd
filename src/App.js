@@ -9,7 +9,7 @@ import MyRoutines from "./MyRoutines";
 import Routines from "./Routines";
 import Navbar from "./Navbar";
 import UpdateRoutine from "./UpdateRoutine";
-import SingleActivity from "./SingleActivity";
+import ActivityDetails from "./ActivityDetails";
 export const url = "https://fitnesstrac-kr.herokuapp.com/api";
 
 const App = () => {
@@ -195,8 +195,10 @@ const App = () => {
           />
           <Route
             exact
-            element={<SingleActivity activites={activites} />}
-            path="/Activities/:activityId"
+            element={
+              <ActivityDetails activites={activites} user={user} url={url} />
+            }
+            path="/Activities/:activityId/routines"
           />
         </Routes>
       </div>
