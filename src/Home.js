@@ -16,9 +16,9 @@ const Home = ({ user }) => {
       <h2>Welcome to Your Custom Fitness Tracker Experience</h2>
 
       <div className="icons">
-        <FontAwesomeIcon icon={faPersonSwimming} />
-        <FontAwesomeIcon icon={faPersonBiking} />
-        <FontAwesomeIcon icon={faPersonRunning} />
+        <FontAwesomeIcon span id="icon" icon={faPersonRunning} />
+        <FontAwesomeIcon span id="icon" icon={faPersonSwimming} />
+        <FontAwesomeIcon span id="icon" icon={faPersonBiking} />
       </div>
       <div className="steps">
         <h3>Step 1: If you are a new user, set up your account below</h3>
@@ -31,6 +31,7 @@ const Home = ({ user }) => {
         </h4>
         <div className="click">
           <button className="glow-on-hover" type="button">
+            <Link to="/Activities"></Link>
             Activities
           </button>
           <br></br>

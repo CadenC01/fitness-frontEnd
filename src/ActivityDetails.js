@@ -23,23 +23,25 @@ const ActivityDetails = ({ activites, user, url }) => {
   }, []);
 
   return (
-    <div className="activity-details">
-      {activity ? (
-        <>
-          <h2>{activity.name}</h2>
-          <h3>{activity.description}</h3>
+    <div className="activity-detail">
+      <div className="activity-details">
+        {activity ? (
+          <>
+            <h2>{activity.name}</h2>
+            <h3>{activity.description}</h3>
 
-          {activityRoutines
-            ? activityRoutines.map((activityRoutine, idx) => {
-                return (
-                  <div key={idx}>
-                    <h3>{activityRoutine.name}</h3>;
-                  </div>
-                );
-              })
-            : null}
-        </>
-      ) : null}
+            {activityRoutines
+              ? activityRoutines.map((activityRoutine, idx) => {
+                  return (
+                    <div key={idx}>
+                      <h3>{activityRoutine.name}</h3>;
+                    </div>
+                  );
+                })
+              : null}
+          </>
+        ) : null}
+      </div>
     </div>
   );
 };
