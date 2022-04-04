@@ -5,7 +5,6 @@ const Activities = ({ routines, user, activities }) => {
   return (
     <>
       <h2>Activities</h2>
-
       {user ? (
         <Link to="/MyActivities">Create new activity</Link>
       ) : (
