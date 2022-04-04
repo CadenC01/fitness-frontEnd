@@ -14,7 +14,7 @@ header {
 #nav {
   display: flex;
   background: transparent;
-  height: 125px;
+  height: 105px;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -102,6 +102,7 @@ h5 {
 .steps {
   border: black solid 7px;
   width: 1000px;
+  margin-bottom: 200px;
 }
 
 .glow-on-hover {
@@ -187,24 +188,19 @@ h5 {
     background-position: 0 0;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0009496918654fe656abfefd4ae17d1a25b4025e
+
 .icons {
-  display: flex;
-  flex-direction: row;
   margin-bottom: 50px;
-  font-size: 100px;
-  margin-top: 10px;
+  background: -webkit-linear-gradient(#802c2b, #537a8c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-<<<<<<< HEAD
-=======
+#icon {
+  font-size: 100px;
 
->>>>>>> 39cf49e447433fbbc8c6d921222e6493d94da8a1
-=======
+  padding: 30px;
+}
 
->>>>>>> 0009496918654fe656abfefd4ae17d1a25b4025e
 footer {
   background-color: black;
 
@@ -219,9 +215,12 @@ footer {
 }
 .routinesCard {
   display: flex;
-  justify-content: space-around;
-  width: 90%;
-  height: 350px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  border: double 8px black;
   box-shadow: 0 0 5px black;
   margin-bottom: 10px;
 }
@@ -230,26 +229,153 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* justify-items: flex-end; */
-  /* padding-left: 20px; */
+  margin-left: 10px;
 }
-.routine > h2 {
+.routine h2 {
   font-size: 50px;
+  color: #802c2b;
 }
-.routine > h4 {
+.routine h4 {
   font-size: 20px;
 }
+.activity {
+  padding-right: 20px;
+  align-items: flex-start;
+}
+
 .activitiesCard {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  border: double 8px black;
+  box-shadow: 0 0 5px black;
+  margin-bottom: 25px;
+}
+.activitiesCard:hover {
+  transform: scale(1.01);
+  background-color: #984950;
+  box-shadow: 0 0 5px black;
+}
 
-  border: 2px solid black;
+#activitie {
+  color: black;
+  font-family: "Wire One";
+  font-size: 50px;
 }
-.activitiesCard > h2 {
-  color: blue;
-  font-size: 500px;
+#activitie:hover {
+  color: white;
+
+  transform: scale(1.3);
 }
-.activities > h2 {
-  color: blue;
-  font-size: 500px;
+#activitie:visited {
+  text-decoration: none;
+}
+#description:hover {
+  color: white;
+}
+
+.activity-detail {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.register {
+  border: black 2px solid;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.glows-on-hover {
+  width: 160px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-family: "Wire One";
+}
+
+.glows-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #007273,
+    #9df3f4,
+    #522b45,
+    #00f0f2,
+    #802c2b,
+    #227273,
+    #009798,
+    #522b45,
+    #802c2b,
+    #467589
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glows-on-hover:active {
+  color: aqua;
+  transform: translate(0px, 5px, 5px);
+  border: solid 2px black;
+}
+
+.glows-on-hover:active:after {
+  background: black;
+}
+
+.glows-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glows-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

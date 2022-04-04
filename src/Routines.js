@@ -19,7 +19,6 @@ const Routines = ({ token, user, routines }) => {
                 <h2>{routine.name}:</h2>
                 <h4>Goal: {routine.goal}</h4>
                 <h5>Creator: {routine.creatorName}</h5>
-                <div></div>
               </div>
               <div className="activity">
                 {routine.activities.map((activity) => {
