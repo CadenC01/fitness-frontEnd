@@ -52,35 +52,42 @@ const Register = ({
   return (
     <>
       <h2>Register</h2>
-      <form onSubmit={handleRegister}>
-        <input
-          required
-          placeholder="Enter username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-
-        <input
-          required
-          type="password"
-          placeholder="Enter password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <input
-          required
-          type="password"
-          placeholder="Confirm"
-          value={confirm}
-          onChange={(e) => setConfirm(e.target.value)}
-        />
-        <button>Register</button>
-      </form>
+      <div className="register">
+        <form onSubmit={handleRegister}>
+          <input
+            required
+            placeholder="Enter username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <br />
+          <input
+            required
+            type="password"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <br />
+          <input
+            required
+            type="password"
+            placeholder="Confirm Password"
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+          />
+          <br />
+          <br />
+          <br />
+          <button className="glows-on-hover">Submit Register</button>
+        </form>
+      </div>
       <p>{error}</p>
       <div className="login-shortcut">
-        <p>Already have an account?</p>
-        <Link to="/Login">Login</Link>
+        <p>
+          Already have an account?
+          <Link to="/Login"> Login</Link>
+        </p>
       </div>
     </>
   );

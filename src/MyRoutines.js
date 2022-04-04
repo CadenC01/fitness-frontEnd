@@ -6,6 +6,17 @@ const MyRoutines = ({ token, routines, user, myRoutine, fecthmyRoutine }) => {
   const [name, setName] = useState("");
   const [goal, setGoal] = useState("");
 
+  const handleDelete = (e) => {
+    console.log("DELETEDs");
+    fetch("http://fitnesstrac-kr.herokuapp.com/api/routines/6", {
+      method: "PATCH",
+      body: JSON.stringify({
+        name: "Long Cardio Day",
+        goal: "To get your heart pumping!",
+      }),
+    });
+  };
+
   const handleCreateRoutine = async (e) => {
     e.preventDefault();
     console.log("submitted");
@@ -25,7 +36,7 @@ const MyRoutines = ({ token, routines, user, myRoutine, fecthmyRoutine }) => {
       }
     );
     const info = await resp.json();
-    fecthmyRoutine();
+    await fecthmyRoutine();
     console.log(info);
   };
 
